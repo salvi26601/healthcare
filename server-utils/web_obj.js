@@ -18,13 +18,13 @@ class WebObj {
   }
 
   loadContract() {
-    let source = fs.readFileSync("./build/contracts/HealthCare.json");
+    let source = fs.readFileSync("./src/abi/HealthCare.json");
     this.contract = JSON.parse(source);
     let tempContract = new this.web3.eth.Contract(this.contract.abi);
-    console.log(this.contract.networks);
-    this.healthCare = tempContract.at(
-      this.contract.networks[process.env.CONTRACT_DEPLOYED_PORT].address
-    );
+    this.healthCare =
+      tempContract[
+        this.contract.networks[process.env.CONTRACT_DEPLOYED_PORT].address
+      ];
   }
 
   getWeb3() {

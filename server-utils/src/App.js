@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HealthRecordContract from './abi/HealthCare.json';
+import HealthRecordContract from './contracts/HealthCare.json';
 import getWeb3 from './utils/getWeb3';
 import {connect} from "react-redux";
 import { setGlobalData } from './actions/global_vars';

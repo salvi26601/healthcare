@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
 import IndexComponent from "./index-component";
 import { loadUserData } from "./utils/auth-util";
@@ -25,7 +25,7 @@ axios.interceptors.response.use(
   }
 );
 
-const Routers = () => {
+const Route_path = () => {
   return (
     <BrowserRouter getUserConfirmation={getConfirmation}>
       <Routes>
@@ -35,4 +35,4 @@ const Routers = () => {
   );
 };
 
-export default Routers;
+export default Route_path;
